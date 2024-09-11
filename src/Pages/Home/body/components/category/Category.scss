@@ -1,0 +1,33 @@
+@import '../../../../../index.scss';
+.category{
+    padding: .95rem 2.2rem;
+    font-family: var(--font-family);
+    border-radius: 2rem;
+    background-color: rgba(0,0,0,.2);
+    font-size: 17px;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    
+
+    &.active::after{
+        content: '';
+        position: absolute;
+        background:  linear-gradient(45deg, #fff 50%, #fa7c06 70%);
+        inset: 0;
+        border-radius: inherit;
+        z-index: -4;
+        padding: 20px;
+
+    }
+    &.active::before{
+        content: '';
+        position: absolute;
+        background:  #000;
+        inset: 0;
+        border-radius: inherit;
+        z-index: -1;
+        padding: 20px;
+
+    }
+}
